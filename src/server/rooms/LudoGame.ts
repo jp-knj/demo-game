@@ -1,9 +1,9 @@
 import { Room, Client } from "colyseus";
-import { RoomState } from "./schema/RoomState";
+import { LudoGameState } from "./schema/LudoGameState";
 
-export class CustomRoom extends Room<RoomState> {
+export class LudoGame extends Room<LudoGameState> {
     onCreate(options: any) {
-        this.setState(new RoomState());
+        this.setState(new LudoGameState());
 
         // @see https://docs.colyseus.io/colyseus/server/room/#onmessage-type-callback
         this.onMessage('keydown', (client, message) => {

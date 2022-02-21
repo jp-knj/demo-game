@@ -5,7 +5,7 @@ import {Server} from 'colyseus';
 import { monitor} from "@colyseus/monitor";
 import { WebSocketTransport } from "@colyseus/ws-transport"
 
-import { CustomRoom } from './rooms/room'
+import { LudoGame } from './rooms/LudoGame';
 
 const port = Number(process.env.PORT || 2567);
 const app = express();
@@ -22,7 +22,7 @@ const gameServer = new Server({
     })
 });
 
-gameServer.define('room', CustomRoom)
+gameServer.define('ludo', LudoGame)
 
 app.use("/colyseus", monitor());
 
