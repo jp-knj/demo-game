@@ -10,6 +10,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.12.0
   '@typescript-eslint/parser': 5.12.0
   colyseus: 0.14.23
+  colyseus.js: 0.14.13
   cors: ^2.8.5
   eslint: 8.9.0
   express: ^4.17.3
@@ -17,6 +18,7 @@ specifiers:
   parcel-plugin-clean-easy: ^1.0.2
   parcel-plugin-static-files-copy: ^2.6.0
   phaser: ^3.55.2
+  regenerator-runtime: 0.13.9
   ts-node: ^10.5.0
   ts-node-dev: ^1.1.8
   tslib: 2.3.1
@@ -28,9 +30,11 @@ dependencies:
   '@colyseus/ws-transport': 0.14.21
   '@types/node': 17.0.18
   colyseus: 0.14.23
+  colyseus.js: 0.14.13
   cors: 2.8.5
   express: 4.17.3
   phaser: 3.55.2
+  regenerator-runtime: 0.13.9
 
 devDependencies:
   '@types/cors': 2.8.12
@@ -609,6 +613,17 @@ packages:
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
     dev: true
+
+  /colyseus.js/0.14.13:
+    resolution: {integrity: sha512-2z1jgOfozQ02gLG5RtTHpk9VZur2b7U4KI9NNldjOZmfc2DZeKejdcKchBTwiDcSwwJQQ4SSOfVUhOcBMILDqA==}
+    engines: {node: '>= 12.x'}
+    dependencies:
+      '@colyseus/schema': 1.0.33
+      httpie: 2.0.0-next.13
+      nanoevents: 5.1.13
+      notepack.io: 2.3.0
+      tslib: 2.3.1
+    dev: false
 
   /colyseus/0.14.23:
     resolution: {integrity: sha512-y2F0vmOx+k8nG2KGcKMeDNjamYNYA+x+E0dVqqWw7lD6g2PhuX8/hkGRrWagJqbFiYTIMfZfa+zN9DinAMCshg==}
@@ -1196,6 +1211,11 @@ packages:
       toidentifier: 1.0.1
     dev: false
 
+  /httpie/2.0.0-next.13:
+    resolution: {integrity: sha512-KbKOnq8wt0hVEfteYCSnEsPgzaWxcVc4qZ4OaDU9mVOYLRo3XChjWs3MiuRgFu5y+4JDo7sDKdKzkAn1ljQYFA==}
+    engines: {node: '>=10'}
+    dev: false
+
   /iconv-lite/0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -1508,6 +1528,11 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: false
 
+  /nanoevents/5.1.13:
+    resolution: {integrity: sha512-JFAeG9fp0QZnRoESHjkbVFbZ9BkOXkkagUVwZVo/pkSX+Fq1VKlY+5og/8X9CYc6C7vje/CV+bwJ5M2X0+IY9Q==}
+    engines: {node: '>=6.0.0'}
+    dev: false
+
   /nanoid/2.1.11:
     resolution: {integrity: sha512-s/snB+WGm6uwi0WjsZdaVcuf3KJXlfGl2LcxgwkEwJF0D/BWzVWAZW/XY4bFaiR7s0Jk3FPvlnepg1H1b1UwlA==}
     dev: false
@@ -1765,6 +1790,10 @@ packages:
       double-ended-queue: 2.1.0-0
       redis-commands: 1.7.0
       redis-parser: 2.6.0
+    dev: false
+
+  /regenerator-runtime/0.13.9:
+    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
     dev: false
 
   /regexp-clone/1.0.0:
@@ -2129,7 +2158,6 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
-    dev: true
 
   /tsutils/3.21.0_typescript@4.5.5:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}

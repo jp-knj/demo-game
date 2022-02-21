@@ -22,7 +22,7 @@ const gameServer = new Server({
     })
 });
 
-gameServer.define('room',CustomRoom)
+gameServer.define('room', CustomRoom)
 
 app.use("/colyseus", monitor());
 

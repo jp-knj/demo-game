@@ -5,10 +5,10 @@ export class CustomRoom extends Room<RoomState> {
     onCreate(options: any) {
         this.setState(new RoomState());
 
-        this.onMessage("type", (client, message) => {
-            //
-            // handle "type" message
-            //
+        // @see https://docs.colyseus.io/colyseus/server/room/#onmessage-type-callback
+        this.onMessage('keydown', (client, message) => {
+            // @see https://docs.colyseus.io/colyseus/server/room/#sendtype-message
+            client.send('keydown', message);
         });
     }
 
