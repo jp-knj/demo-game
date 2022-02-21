@@ -1,0 +1,12 @@
+# build
+dist
+
+# cache
+.parcel-cache
+
+# editor
+.idea
+
+# development
+node_modules
+
